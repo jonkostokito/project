@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+.skill-bar {
+    width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    .bar {
+        margin: 20px 0;
+        &:first-child {
+            margin-top: 0;
+        }
+        .info {
+            span {
+                font-size: 17px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+        }
+        .html {
+            span {
+                width: 90%;
+            }
+        }
+        .css {
+            span {
+                width: 70%;
+            }
+        }
+        .sass {
+            span {
+                width: 80%;
+            }
+        }
+        .javascript {
+            span {
+                width: 60%;
+            }
+        }
+        .c {
+            span {
+                width: 50%;
+            }
+        }
+        .progress-line {
+            position: relative;
+            height: 10px;
+            width: 100%;
+            background: #f0f0f0;
+            box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+                              0px 1px rgba(255,255,255,0.8);
+            border-radius: 8.5px;
+            span {
+                height: 100%;
+                background: #6665ee;
+                position: absolute;
+                border-radius: 8.5px;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: -10px;
+                    height: 0;
+                    right: 0;
+                    width: 0;
+                    border: 7px solid transparent;
+                    border-bottom-width: 0px;
+                    border-right-width: 0px;
+                    border-top-color: #000;
+                }
+                &::after {
+                    position: absolute;
+                    right: 0;
+                    top: -28px;
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 500;
+                    background: #000;
+                    padding: 1px 8px;
+                    border-radius: 3px;
+                }
+
+            }
+        }
+        .html {
+            span::after {
+                content: "90%";
+            }
+        }
+        .css {
+            span::after {
+                content: "70%";
+            }
+        }
+        .sass {
+            span::after {
+                content: "80%";
+            }
+        }
+        .javascript {
+            span::after {
+                content: "60%";
+            }
+        }
+        .c {
+            span::after {
+                content: "50%";
+            }
+        }
+    }
+}
